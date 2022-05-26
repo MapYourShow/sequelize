@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/errors/bulk-record-error.ts"],
+  "sourcesContent": ["import type { Model } from '..';\r\nimport type { ErrorOptions } from './base-error';\r\nimport BaseError from './base-error';\r\n\r\n/**\r\n * Thrown when bulk operation fails, it represent per record level error.\r\n * Used with AggregateError\r\n *\r\n * @param error Error for a given record/instance\r\n * @param record DAO instance that error belongs to\r\n */\r\nclass BulkRecordError extends BaseError {\r\n  errors: Error;\r\n  record: Model;\r\n\r\n  constructor(error: Error, record: Model, options?: ErrorOptions) {\r\n    super(error.message, options);\r\n    this.name = 'SequelizeBulkRecordError';\r\n    this.errors = error;\r\n    this.record = record;\r\n  }\r\n}\r\n\r\nexport default BulkRecordError;\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,wBAAsB;AAStB,MAAM,wBAAwB,0BAAU;AAAA,EACtC;AAAA,EACA;AAAA,EAEA,YAAY,OAAc,QAAe,SAAwB;AAC/D,UAAM,MAAM,SAAS,OAAO;AAC5B,SAAK,OAAO;AACZ,SAAK,SAAS;AACd,SAAK,SAAS;AAAA,EAChB;AACF;AAEA,IAAO,4BAAQ;",
+  "names": []
+}

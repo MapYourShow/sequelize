@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/errors/sequelize-scope-error.ts"],
+  "sourcesContent": ["import type { ErrorOptions } from './base-error';\r\nimport BaseError from './base-error';\r\n\r\n/**\r\n * Scope Error. Thrown when the sequelize cannot query the specified scope.\r\n */\r\nclass SequelizeScopeError extends BaseError {\r\n  constructor(message: string, options?: ErrorOptions) {\r\n    super(message, options);\r\n    this.name = 'SequelizeScopeError';\r\n  }\r\n}\r\n\r\nexport default SequelizeScopeError;\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,wBAAsB;AAKtB,MAAM,4BAA4B,0BAAU;AAAA,EAC1C,YAAY,SAAiB,SAAwB;AACnD,UAAM,SAAS,OAAO;AACtB,SAAK,OAAO;AAAA,EACd;AACF;AAEA,IAAO,gCAAQ;",
+  "names": []
+}

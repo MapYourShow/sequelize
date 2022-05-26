@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/errors/association-error.ts"],
+  "sourcesContent": ["import type { ErrorOptions } from './base-error';\r\nimport BaseError from './base-error';\r\n\r\n/**\r\n * Thrown when an association is improperly constructed (see message for details)\r\n */\r\nclass AssociationError extends BaseError {\r\n  constructor(message: string, options?: ErrorOptions) {\r\n    super(message, options);\r\n    this.name = 'SequelizeAssociationError';\r\n  }\r\n}\r\n\r\nexport default AssociationError;\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,wBAAsB;AAKtB,MAAM,yBAAyB,0BAAU;AAAA,EACvC,YAAY,SAAiB,SAAwB;AACnD,UAAM,SAAS,OAAO;AACtB,SAAK,OAAO;AAAA,EACd;AACF;AAEA,IAAO,4BAAQ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/utils/model-utils.ts"],
+  "sourcesContent": ["import type { ModelStatic } from '../model';\r\nimport { Model } from '../model';\r\n\r\n/**\r\n * Returns true if the value is a model subclass.\r\n *\r\n * @param val The value whose type will be checked\r\n */\r\nexport function isModelStatic<M extends Model>(val: any): val is ModelStatic<M> {\r\n  return typeof val === 'function' && val.prototype instanceof Model;\r\n}\r\n\r\n/**\r\n * Returns true if a & b are the same initial model, ignoring variants created by {@link Model.withSchema}, {@link Model.withScope}, and the like.\r\n *\r\n * The difference with doing `a === b` is that this method will also\r\n * return true if one of the models is scoped, or a variant with a different schema.\r\n *\r\n * @example\r\n * isSameInitialModel(a, a.withScope('myScope')) // true;\r\n *\r\n * @param a\r\n * @param b\r\n */\r\nexport function isSameInitialModel(a: ModelStatic<any>, b: ModelStatic<any>): boolean {\r\n  return isModelStatic(a) && isModelStatic(b)\r\n    && (a.getInitialModel() === b.getInitialModel());\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,mBAAsB;AAOf,uBAAwC,KAAiC;AAC9E,SAAO,OAAO,QAAQ,cAAc,IAAI,qBAAqB;AAC/D;AAcO,4BAA4B,GAAqB,GAA8B;AACpF,SAAO,cAAc,CAAC,KAAK,cAAc,CAAC,KACpC,EAAE,gBAAgB,MAAM,EAAE,gBAAgB;AAClD;",
+  "names": []
+}

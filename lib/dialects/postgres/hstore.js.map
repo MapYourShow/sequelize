@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/dialects/postgres/hstore.js"],
+  "sourcesContent": ["'use strict';\r\n\r\nconst hstore = require('pg-hstore')({ sanitize: true });\r\n\r\nexport function stringify(data) {\r\n  if (data === null) {\r\n    return null;\r\n  }\r\n\r\n  return hstore.stringify(data);\r\n}\r\n\r\nexport function parse(value) {\r\n  if (value === null) {\r\n    return null;\r\n  }\r\n\r\n  return hstore.parse(value);\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,MAAM,SAAS,QAAQ,WAAW,EAAE,EAAE,UAAU,KAAK,CAAC;AAE/C,mBAAmB,MAAM;AAC9B,MAAI,SAAS,MAAM;AACjB,WAAO;AAAA,EACT;AAEA,SAAO,OAAO,UAAU,IAAI;AAC9B;AAEO,eAAe,OAAO;AAC3B,MAAI,UAAU,MAAM;AAClB,WAAO;AAAA,EACT;AAEA,SAAO,OAAO,MAAM,KAAK;AAC3B;",
+  "names": []
+}
