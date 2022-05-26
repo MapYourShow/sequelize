@@ -15,5 +15,4 @@ test/binary/tmp/*
 .typedoc-build
 node_modules
 *.log
-/lib
 /types

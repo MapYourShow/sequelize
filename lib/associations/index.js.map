@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/associations/index.ts"],
+  "sourcesContent": ["import type { Class } from 'type-fest';\r\nimport type { Model, ModelStatic } from '../model';\r\nimport type { Sequelize } from '../sequelize';\r\nimport type { Association } from './base';\r\n\r\nexport * from './base';\r\nexport * from './belongs-to';\r\nexport * from './has-one';\r\nexport * from './has-many';\r\nexport * from './belongs-to-many';\r\n\r\nexport type BeforeAssociateEventData = {\r\n  source: ModelStatic<Model>,\r\n  target: ModelStatic<Model>,\r\n  sequelize: Sequelize,\r\n  type: Class<Association>,\r\n};\r\n\r\nexport type AfterAssociateEventData = BeforeAssociateEventData & {\r\n  association: Association,\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAKA,iCAAc,mBALd;AAMA,iCAAc,yBANd;AAOA,iCAAc,sBAPd;AAQA,iCAAc,uBARd;AASA,iCAAc,8BATd;",
+  "names": []
+}

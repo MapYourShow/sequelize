@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/utils/array.ts"],
+  "sourcesContent": ["/**\r\n * Checks if 2 arrays intersect.\r\n *\r\n * @param arr1\r\n * @param arr2\r\n * @private\r\n */\r\nexport function intersects<T>(arr1: T[], arr2: T[]): boolean {\r\n  return arr1.some(v => arr2.includes(v));\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAOO,oBAAuB,MAAW,MAAoB;AAC3D,SAAO,KAAK,KAAK,OAAK,KAAK,SAAS,CAAC,CAAC;AACxC;",
+  "names": []
+}

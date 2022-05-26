@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/errors/database/timeout-error.ts"],
+  "sourcesContent": ["import type { SequelizeErrorOptions } from '../base-error';\r\nimport type { DatabaseErrorParent } from '../database-error';\r\nimport DatabaseError from '../database-error';\r\n\r\n/**\r\n * Thrown when a database query times out because of a deadlock\r\n */\r\nclass TimeoutError extends DatabaseError {\r\n  constructor(parent: DatabaseErrorParent, options?: SequelizeErrorOptions) {\r\n    super(parent, options);\r\n    this.name = 'SequelizeTimeoutError';\r\n  }\r\n}\r\n\r\nexport default TimeoutError;\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,4BAA0B;AAK1B,MAAM,qBAAqB,8BAAc;AAAA,EACvC,YAAY,QAA6B,SAAiC;AACxE,UAAM,QAAQ,OAAO;AACrB,SAAK,OAAO;AAAA,EACd;AACF;AAEA,IAAO,wBAAQ;",
+  "names": []
+}

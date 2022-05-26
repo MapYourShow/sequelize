@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.js"],
+  "sourcesContent": ["'use strict';\r\n\r\n/**\r\n  * A Sequelize module that contains the sequelize entry point.\r\n  *\r\n  * @module sequelize\r\n  */\r\n\r\n/** Exports the sequelize entry point. */\r\nconst { Sequelize } = require('./sequelize');\r\n\r\n// for backward compatibility, Sequelize is importable with both of these styles:\r\n//  const Sequelize = require('@sequelize/core')\r\n//  const { Sequelize } = require('@sequelize/core')\r\nmodule.exports = Sequelize;\r\nmodule.exports.Sequelize = Sequelize;\r\nmodule.exports.default = Sequelize;\r\n"],
+  "mappings": ";AASA,MAAM,EAAE,cAAc,QAAQ,aAAa;AAK3C,OAAO,UAAU;AACjB,OAAO,QAAQ,YAAY;AAC3B,OAAO,QAAQ,UAAU;",
+  "names": []
+}

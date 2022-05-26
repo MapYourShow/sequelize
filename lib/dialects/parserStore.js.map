@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/dialects/parserStore.js"],
+  "sourcesContent": ["'use strict';\r\n\r\nconst stores = new Map();\r\n\r\nmodule.exports = dialect => {\r\n  if (!stores.has(dialect)) {\r\n    stores.set(dialect, new Map());\r\n  }\r\n\r\n  return {\r\n    clear() {\r\n      stores.get(dialect).clear();\r\n    },\r\n    refresh(dataType) {\r\n      for (const type of dataType.types[dialect]) {\r\n        stores.get(dialect).set(type, dataType.parse);\r\n      }\r\n    },\r\n    get(type) {\r\n      return stores.get(dialect).get(type);\r\n    },\r\n  };\r\n};\r\n"],
+  "mappings": ";AAEA,MAAM,SAAS,oBAAI,IAAI;AAEvB,OAAO,UAAU,aAAW;AAC1B,MAAI,CAAC,OAAO,IAAI,OAAO,GAAG;AACxB,WAAO,IAAI,SAAS,oBAAI,IAAI,CAAC;AAAA,EAC/B;AAEA,SAAO;AAAA,IACL,QAAQ;AACN,aAAO,IAAI,OAAO,EAAE,MAAM;AAAA,IAC5B;AAAA,IACA,QAAQ,UAAU;AAChB,iBAAW,QAAQ,SAAS,MAAM,UAAU;AAC1C,eAAO,IAAI,OAAO,EAAE,IAAI,MAAM,SAAS,KAAK;AAAA,MAC9C;AAAA,IACF;AAAA,IACA,IAAI,MAAM;AACR,aAAO,OAAO,IAAI,OAAO,EAAE,IAAI,IAAI;AAAA,IACrC;AAAA,EACF;AACF;",
+  "names": []
+}

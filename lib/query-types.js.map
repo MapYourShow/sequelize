@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/query-types.ts"],
+  "sourcesContent": ["/**\r\n * An enum of query types used by `sequelize.query`\r\n *\r\n * @see {@link Sequelize#query}\r\n *\r\n * @property SELECT\r\n * @property INSERT\r\n * @property UPDATE\r\n * @property BULKUPDATE\r\n * @property BULKDELETE\r\n * @property DELETE\r\n * @property UPSERT\r\n * @property VERSION\r\n * @property SHOWTABLES\r\n * @property SHOWINDEXES\r\n * @property DESCRIBE\r\n * @property RAW\r\n * @property FOREIGNKEYS\r\n * @property SHOWCONSTRAINTS\r\n */\r\nexport enum QueryTypes {\r\n  SELECT = 'SELECT',\r\n  INSERT = 'INSERT',\r\n  UPDATE = 'UPDATE',\r\n  BULKUPDATE = 'BULKUPDATE',\r\n  BULKDELETE = 'BULKDELETE',\r\n  DELETE = 'DELETE',\r\n  UPSERT = 'UPSERT',\r\n  VERSION = 'VERSION',\r\n  SHOWTABLES = 'SHOWTABLES',\r\n  SHOWINDEXES = 'SHOWINDEXES',\r\n  DESCRIBE = 'DESCRIBE',\r\n  RAW = 'RAW',\r\n  FOREIGNKEYS = 'FOREIGNKEYS',\r\n  SHOWCONSTRAINTS = 'SHOWCONSTRAINTS',\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAoBO,IAAK,aAAL,kBAAK,gBAAL;AACL,0BAAS;AACT,0BAAS;AACT,0BAAS;AACT,8BAAa;AACb,8BAAa;AACb,0BAAS;AACT,0BAAS;AACT,2BAAU;AACV,8BAAa;AACb,+BAAc;AACd,4BAAW;AACX,uBAAM;AACN,+BAAc;AACd,mCAAkB;AAdR;AAAA;",
+  "names": []
+}
